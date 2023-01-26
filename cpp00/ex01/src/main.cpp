@@ -6,7 +6,7 @@
 /*   By: mteerlin <mteerlin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/01/24 12:24:49 by mteerlin      #+#    #+#                 */
-/*   Updated: 2023/01/24 17:42:39 by mteerlin      ########   odam.nl         */
+/*   Updated: 2023/01/25 22:55:12 by argentumlun   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,19 @@ int	main(void)
 	phonebook	book;
 	std::string	command;
 
-	while (1)
+	book.displayCommands();
+	while (command.compare("EXIT"))
 	{
-		std::cin >> command;
-		if (command == "ADD")
-			book.add();
-		else if (command == "SEARCH")
-			book.search();
-		else if (command == "EXIT")
-			break ;
+		std::getline(std::cin, command);
+		if (!command.compare("ADD"))
+			book.addContact();
+		else if (!command.compare("SEARCH"))
+		{
+			book.displayContacts();
+			book.searchContact();
+		}
+		else
+			std::cout << "Please enter a valid command: ADD, SEARCH, EXIT" << std::endl;
 	}
 	return (0);
 }

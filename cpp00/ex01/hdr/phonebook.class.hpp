@@ -6,7 +6,7 @@
 /*   By: mteerlin <mteerlin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/01/20 16:58:43 by mteerlin      #+#    #+#                 */
-/*   Updated: 2023/01/24 18:16:52 by mteerlin      ########   odam.nl         */
+/*   Updated: 2023/01/25 22:51:36 by argentumlun   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,20 @@
 
 class phonebook
 {
+private:
+	contact		_list[8];
+	int			_listSize;
+
+	int			_getInput(std::string prompt) const;
 
 public:
-	contact	list[8];
-
 	phonebook(void);
 	~phonebook(void);
 
-	void	add();
-	void	search() const;
+	void	displayCommands() const;
+	void	addContact();
+	void	displayContacts() const;
+	void	searchContact() const;
 };
 
 #endif
