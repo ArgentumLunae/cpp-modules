@@ -1,36 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   phonebook.class.hpp                                :+:    :+:            */
+/*   contact.class.hpp                                  :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: mteerlin <mteerlin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/01/20 16:58:43 by mteerlin      #+#    #+#                 */
-/*   Updated: 2023/01/25 22:51:36 by argentumlun   ########   odam.nl         */
+/*   Created: 2023/01/24 12:27:02 by mteerlin      #+#    #+#                 */
+/*   Updated: 2023/01/26 14:46:45 by argentumlun   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_CLASS_HPP
-# define PHONEBOOK_CLASS_HPP
+#ifndef Contact_CLASS_CPP
+# define Contact_CLASS_CPP
 
-# include "contact.class.hpp"
+# include <string>
 
-class phonebook
+class Contact
 {
 private:
-	contact		_list[8];
-	int			_listSize;
+	int			_index;
+	std::string	_firstName;
+	std::string	_lastName;
+	std::string	_nickName;
+	std::string	_darkestSecret;
 
-	int			_getInput(std::string prompt) const;
+	std::string _getInput(std::string prompt) const;
+	std::string _trunkate(std::string str) const;
 
 public:
-	phonebook(void);
-	~phonebook(void);
+	Contact();
+	~Contact();
 
-	void	displayCommands() const;
-	void	addContact();
-	void	displayContacts() const;
-	void	searchContact() const;
+	void	initContact(int index);
+	void	previewContact(void) const;
+	void	viewContact(void) const;
 };
 
 #endif

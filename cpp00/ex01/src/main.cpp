@@ -6,17 +6,17 @@
 /*   By: mteerlin <mteerlin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/01/24 12:24:49 by mteerlin      #+#    #+#                 */
-/*   Updated: 2023/01/25 22:55:12 by argentumlun   ########   odam.nl         */
+/*   Updated: 2023/01/26 14:46:45 by argentumlun   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string>
 #include <iostream>
-#include "phonebook.class.hpp"
+#include "Phonebook.class.hpp"
 
 int	main(void)
 {
-	phonebook	book;
+	Phonebook	book;
 	std::string	command;
 
 	book.displayCommands();

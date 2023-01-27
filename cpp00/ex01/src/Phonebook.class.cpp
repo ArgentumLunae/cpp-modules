@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   phonebook.class.cpp                                :+:    :+:            */
+/*   Phonebook.class.cpp                                :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: mteerlin <mteerlin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/01/24 12:19:32 by mteerlin      #+#    #+#                 */
-/*   Updated: 2023/01/25 22:51:39 by argentumlun   ########   odam.nl         */
+/*   Updated: 2023/01/26 14:46:45 by argentumlun   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include "phonebook.class.hpp"
-#include "contact.class.hpp"
+#include "Phonebook.class.hpp"
+#include "Contact.class.hpp"
 #include <iostream>
 #include <iomanip>
 
-int	phonebook::_getInput(std::string prompt) const
+int	Phonebook::_getInput(std::string prompt) const
 {
 	int	input = -1;
 
@@ -32,28 +32,28 @@ int	phonebook::_getInput(std::string prompt) const
 	return (input - 1);
 }
 
-phonebook::phonebook(void)
+Phonebook::Phonebook(void)
 {
-	std::cout << "phonebook has been created." << std::endl;
+	std::cout << "Phonebook has been created." << std::endl;
 	this->_listSize = 0;
 	return ;
 }
 
-phonebook::~phonebook(void)
+Phonebook::~Phonebook(void)
 {
-	std::cout << "phonebook has been destroyed." << std::endl;
+	std::cout << "Phonebook has been destroyed." << std::endl;
 	return ;
 }
 
-void	phonebook::displayCommands() const
+void	Phonebook::displayCommands() const
 {
-	std::cout << "PHONEBOOK COMMANDS" << std::endl;
-	std::cout << "\tADD: add a new contact" << std::endl;
-	std::cout << "\tSEARCH: see contact list, and view contact" << std::endl;
+	std::cout << "Phonebook COMMANDS" << std::endl;
+	std::cout << "\tADD: add a new Contact" << std::endl;
+	std::cout << "\tSEARCH: see Contact list, and view Contact" << std::endl;
 	std::cout << "\tEXIT: exit program" << std::endl << std::endl;
 }
 
-void	phonebook::addContact()
+void	Phonebook::addContact()
 {
 	static int oldest = 0;
 
@@ -66,16 +66,16 @@ void	phonebook::addContact()
 	return ;
 }
 
-void	phonebook::displayContacts() const
+void	Phonebook::displayContacts() const
 {
 	int	index = 0;
 
 	if (this->_listSize < 1)
 	{
-		std::cout << "No contacts in list." << std::endl;
+		std::cout << "No Contacts in list." << std::endl;
 		return ;
 	}
-	std::cout << "All contacts" << std::endl;
+	std::cout << "All Contacts" << std::endl;
 	std::cout << "|" << std::setw(10) << "Index";
 	std::cout << "|" << std::setw(10) << "First Name";
 	std::cout << "|" << std::setw(10) << "Last Name";
@@ -88,13 +88,13 @@ void	phonebook::displayContacts() const
 	}
 }
 
-void	phonebook::searchContact() const
+void	Phonebook::searchContact() const
 {
 	int	index;
 
 	if (this->_listSize < 1)
 		return ;
-	index = _getInput("Enter the index of the contact you wish to look at: ");
+	index = _getInput("Enter the index of the Contact you wish to look at: ");
 	this->_list[index].viewContact();
 	return ;
 }

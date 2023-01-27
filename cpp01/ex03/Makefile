@@ -6,14 +6,14 @@
 #    By: mteerlin <mteerlin@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2023/01/20 13:49:24 by mteerlin      #+#    #+#                  #
-#    Updated: 2023/01/26 14:47:56 by argentumlun   ########   odam.nl          #
+#    Updated: 2023/01/26 16:29:51 by argentumlun   ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = phonebook
+NAME = violence
 OBJ_DIR = obj
 VPATH := $(subst $(" "),:,$(shell find src -type d))
-SRC_FILES = main.cpp Contact.class.cpp Phonebook.class.cpp
+SRC_FILES = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 OBJ_FILES = $(addprefix $(OBJ_DIR)/, $(notdir $(patsubst %.cpp, %.o, $(SRC_FILES))))
 HDR_FILES := $(addprefix -I,$(shell find hdr -type d -print))
 C_FLAGS = -Wall -Wextra -Werror
