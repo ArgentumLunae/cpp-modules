@@ -1,30 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   Data.hpp                                           :+:    :+:            */
+/*   Base.cpp                                           :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: argentumlunae <argentumlunae@student.co      +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/02/07 21:21:55 by argentumlun   #+#    #+#                 */
-/*   Updated: 2023/02/07 21:25:51 by argentumlun   ########   odam.nl         */
+/*   Created: 2023/02/09 12:46:42 by argentumlun   #+#    #+#                 */
+/*   Updated: 2023/02/09 12:48:33 by argentumlun   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DATA_HPP
-# define DATA_HPP
+#include "Base.hpp"
 
-# include <string>
-
-class Data
-{
-	private:
-		std::string	_name;
-		int			_age;
-
-	public:
-		Data();
-		Data(Data & src);
-		~Data();
-}
-
-#endif
+Base::~Base(){}

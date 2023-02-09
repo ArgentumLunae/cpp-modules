@@ -6,11 +6,11 @@
 #    By: mteerlin <mteerlin@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2023/01/20 13:49:24 by mteerlin      #+#    #+#                  #
-#    Updated: 2023/02/09 12:43:55 by argentumlun   ########   odam.nl          #
+#    Updated: 2023/02/09 19:35:45 by argentumlun   ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ex01
+NAME = ex02
 OBJ_DIR = obj
 VPATH := $(subst $(" "),:,$(shell find src -type d))
 SRC_FILES = main.cpp
