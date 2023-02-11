@@ -6,11 +6,11 @@
 #    By: mteerlin <mteerlin@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2023/01/20 13:49:24 by mteerlin      #+#    #+#                  #
-#    Updated: 2023/01/26 14:47:47 by argentumlun   ########   odam.nl          #
+#    Updated: 2023/02/11 15:25:51 by argentumlun   ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = zombie
+NAME = ex00
 OBJ_DIR = obj
 VPATH := $(subst $(" "),:,$(shell find src -type d))
 SRC_FILES = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp

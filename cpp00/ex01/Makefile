@@ -6,11 +6,11 @@
 #    By: mteerlin <mteerlin@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2023/01/20 13:49:24 by mteerlin      #+#    #+#                  #
-#    Updated: 2023/01/26 14:47:56 by argentumlun   ########   odam.nl          #
+#    Updated: 2023/02/11 15:25:27 by argentumlun   ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = phonebook
+NAME = ex01
 OBJ_DIR = obj
 VPATH := $(subst $(" "),:,$(shell find src -type d))
 SRC_FILES = main.cpp Contact.class.cpp Phonebook.class.cpp
