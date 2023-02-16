@@ -6,11 +6,11 @@
 #    By: mteerlin <mteerlin@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2023/01/20 13:49:24 by mteerlin      #+#    #+#                  #
-#    Updated: 2023/01/20 14:05:34 by mteerlin      ########   odam.nl          #
+#    Updated: 2023/02/11 15:25:19 by argentumlun   ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = megaphone
+NAME = ex00
 OBJ_DIR = obj
 VPATH := $(subst $(" "),:,$(shell find src -type d))
 SRC_FILES += megaphone.cpp

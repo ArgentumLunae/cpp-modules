@@ -6,14 +6,14 @@
 #    By: mteerlin <mteerlin@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2023/01/20 13:49:24 by mteerlin      #+#    #+#                  #
-#    Updated: 2023/02/11 15:26:39 by argentumlun   ########   odam.nl          #
+#    Updated: 2023/02/09 21:25:48 by argentumlun   ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ex05
+NAME = ex00
 OBJ_DIR = obj
 VPATH := $(subst $(" "),:,$(shell find src -type d))
-SRC_FILES = main.cpp Harl.cpp
+SRC_FILES = main.cpp
 OBJ_FILES = $(addprefix $(OBJ_DIR)/, $(notdir $(patsubst %.cpp, %.o, $(SRC_FILES))))
 HDR_FILES := $(addprefix -I,$(shell find hdr -type d -print))
 C_FLAGS = -Wall -Wextra -Werror
