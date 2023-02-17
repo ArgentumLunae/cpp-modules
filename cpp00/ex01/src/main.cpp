@@ -6,7 +6,7 @@
 /*   By: mteerlin <mteerlin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/01/24 12:24:49 by mteerlin      #+#    #+#                 */
-/*   Updated: 2023/01/26 14:46:45 by argentumlun   ########   odam.nl         */
+/*   Updated: 2023/02/16 21:37:48 by mteerlin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ int	main(void)
 			book.displayContacts();
 			book.searchContact();
 		}
+		else if (std::cin.eof())
+			break ;
 		else
 			std::cout << "Please enter a valid command: ADD, SEARCH, EXIT" << std::endl;
 	}

@@ -6,7 +6,7 @@
 /*   By: argentumlunae <argentumlunae@student.co      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/01/26 12:17:45 by argentumlun   #+#    #+#                 */
-/*   Updated: 2023/01/26 15:11:43 by argentumlun   ########   odam.nl         */
+/*   Updated: 2023/02/17 15:54:42 by mteerlin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class Zombie
 		std::string	_name;
 
 	public:
+		Zombie();
 		Zombie(std::string name);
 		~Zombie();
 

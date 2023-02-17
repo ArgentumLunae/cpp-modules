@@ -6,7 +6,7 @@
 /*   By: mteerlin <mteerlin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/01/27 17:14:37 by mteerlin      #+#    #+#                 */
-/*   Updated: 2023/01/28 14:29:59 by mteerlin      ########   odam.nl         */
+/*   Updated: 2023/02/17 17:34:46 by mteerlin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,11 @@ int main(void)
 	Fixed c;
 
 	c = b;
+	std::cout << a.getRawBits() << std::endl;
+	std::cout << b.getRawBits() << std::endl;
+	std::cout << c.getRawBits() << std::endl << std::endl;
+	a.setRawBits(17);
+	c = a;
 	std::cout << a.getRawBits() << std::endl;
 	std::cout << b.getRawBits() << std::endl;
 	std::cout << c.getRawBits() << std::endl;

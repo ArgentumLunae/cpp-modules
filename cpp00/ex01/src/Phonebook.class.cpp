@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   Phonebook.class.cpp                                :+:    :+:            */
+/*   phonebook.class.cpp                                :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: mteerlin <mteerlin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/01/24 12:19:32 by mteerlin      #+#    #+#                 */
-/*   Updated: 2023/01/26 14:46:45 by argentumlun   ########   odam.nl         */
+/*   Updated: 2023/02/17 15:27:42 by mteerlin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,6 @@
 #include "Contact.class.hpp"
 #include <iostream>
 #include <iomanip>
-
-int	Phonebook::_getInput(std::string prompt) const
-{
-	int	input = -1;
-
-	while (1)
-	{
-		std::cout << prompt;
-		std::cin >> input;
-		if (input > 0 && input <= this->_listSize)
-			break ;
-		else
-			std::cout << "Please provide existing index." << std::endl;
-	}
-	return (input - 1);
-}
 
 Phonebook::Phonebook(void)
 {
@@ -43,6 +27,29 @@ Phonebook::~Phonebook(void)
 {
 	std::cout << "Phonebook has been destroyed." << std::endl;
 	return ;
+}
+
+int	Phonebook::_getInput(std::string prompt) const
+{
+	std::string	input = "";
+	int			in = 0;
+
+	while (1)
+	{
+		std::cout << prompt;
+		std::getline(std::cin, input);
+		in = std::atoi(input.c_str());
+		if (input.length() > 1 || !std::isdigit(input[0]) || in <= 0 || in > this->_listSize)
+			std::cout << "Please enter a valid index." << std::endl;
+		else
+			return (in - 1);
+		if (std::cin.eof())
+		{
+			std::cin.clear();
+			std::clearerr(stdin);
+		}
+	}
+	return (in - 1);
 }
 
 void	Phonebook::displayCommands() const

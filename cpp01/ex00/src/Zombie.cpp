@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   zombie.cpp                                         :+:    :+:            */
+/*   Zombie.cpp                                         :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: argentumlunae <argentumlunae@student.co      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/01/26 12:20:38 by argentumlun   #+#    #+#                 */
-/*   Updated: 2023/01/26 14:47:22 by argentumlun   ########   odam.nl         */
+/*   Updated: 2023/02/17 15:53:55 by mteerlin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie(void) : _name("default")
+Zombie::Zombie() : _name("default")
 {
 	std::cout << this->_name << " constructor called" << std::endl;
 	return ;

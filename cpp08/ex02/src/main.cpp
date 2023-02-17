@@ -5,12 +5,8 @@
 /*                                                     +:+                    */
 /*   By: mteerlin <mteerlin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/02/01 12:48:03 by mteerlin      #+#    #+#                 */
-/*   Updated: 2023/02/01 12:48:22 by mteerlin      ########   odam.nl         */
+/*   Created: 2023/02/17 23:16:27 by mteerlin      #+#    #+#                 */
+/*   Updated: 2023/02/17 23:16:27 by mteerlin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	main(void)
-{
-	return (0);
-}

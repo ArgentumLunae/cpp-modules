@@ -6,7 +6,7 @@
 #    By: mteerlin <mteerlin@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2023/01/20 13:49:24 by mteerlin      #+#    #+#                  #
-#    Updated: 2023/01/31 20:50:21 by argentumlun   ########   odam.nl          #
+#    Updated: 2023/02/17 15:47:38 by mteerlin      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ HDR_FILES := $(addprefix -I,$(shell find hdr -type d -print))
 C_FLAGS = -Wall -Wextra -Werror
 STD_FLAGS = -std=c++98
 SAN_FLAGS = -g -fsanitize=thread
-CC = g++ $(C_FLAGS) #$(STD_FLAGS)$(SAN_FLAGS)
+CC = g++ $(C_FLAGS) $(STD_FLAGS) #$(SAN_FLAGS)
 
 all: obj_dir $(NAME)
 

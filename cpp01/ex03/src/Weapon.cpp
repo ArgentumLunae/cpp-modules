@@ -6,7 +6,7 @@
 /*   By: argentumlunae <argentumlunae@student.co      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/01/26 15:34:28 by argentumlun   #+#    #+#                 */
-/*   Updated: 2023/01/26 16:36:39 by argentumlun   ########   odam.nl         */
+/*   Updated: 2023/02/17 16:56:30 by mteerlin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ Weapon::Weapon(std::string type) : _type(type)
 
 Weapon::~Weapon()
 {
+	std::cout << this->_type << " destructor called" << std:: endl;
 }
 
 std::string	Weapon::getType() const
